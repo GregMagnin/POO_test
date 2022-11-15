@@ -53,16 +53,11 @@ class AuthController {
             header("location: /error");
             exit();
             }
-    } else {
-        echo ('Une des cases est vide.');
-    }
-
-
-public function logout(): void {
-session_start();
-session_destroy();
-require_once '../views/login.html';
+    }}
+public function logout() : void {
+    session_destroy();
+    require_once './views/login.html';
     }
 
 }
-}
+
