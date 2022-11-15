@@ -7,7 +7,7 @@ class StoreController {
     
     public function home(): string
     {
-        return require './views/homepage.html';
+        return require './views/homepage.php';
     }
 
     public function error(): string
