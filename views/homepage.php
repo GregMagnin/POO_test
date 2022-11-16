@@ -1,3 +1,10 @@
+<?php 
+if ($_SESSION["user"] === null) {
+    header("Location:/login");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +16,7 @@
 </head>
 <body>
     <?php
-    echo($_SESSION['user']);
+    echo($_SESSION['user'])
     ?>
 
     C'est le super store vroom

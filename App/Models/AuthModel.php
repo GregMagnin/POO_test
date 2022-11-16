@@ -20,7 +20,6 @@ class AuthModel extends Connection {
         $query->bindParam(":username", $username, \PDO::PARAM_STR);
         $query->execute();
         $row = $query->fetch();
-        return $row;
-        
+        return $row;    
     }
 }
