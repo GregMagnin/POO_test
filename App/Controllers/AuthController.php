@@ -11,12 +11,12 @@ class AuthController {
 
     public function login(): string
     {
-        return require './views/login.html';
+        return require './views/login.php';
     }
 
     public function register(): string
     {
-        return require './views/register.html';
+        return require './views/register.php';
     }
 
 
@@ -55,8 +55,9 @@ class AuthController {
             }
     }}
 public function logout() : void {
+    session_unset();
     session_destroy();
-    require_once './views/login.html';
+    header('Location:/login');
     }
 
 }

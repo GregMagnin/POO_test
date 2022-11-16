@@ -1,3 +1,10 @@
+<?php 
+if ($_SESSION["user"] ?? null)  {
+    header("Location:/homepage");
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
