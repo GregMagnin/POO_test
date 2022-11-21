@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "12cbeb28cd0aea3107cfe4a412480b61",
+    "content-hash": "92b2c81f946bb3186a866fda2f568059",
     "packages": [
+        {
+            "name": "ashleydawson/simple-pagination",
+            "version": "1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AshleyDawson/SimplePagination.git",
+                "reference": "b824bcb4f1035d428638884ce823eaf45a22782d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AshleyDawson/SimplePagination/zipball/b824bcb4f1035d428638884ce823eaf45a22782d",
+                "reference": "b824bcb4f1035d428638884ce823eaf45a22782d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "AshleyDawson\\SimplePagination\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashley Dawson",
+                    "email": "ashley@ashleydawson.co.uk"
+                }
+            ],
+            "description": "Simple, lightweight and universal service that implements pagination on collections of things",
+            "keywords": [
+                "Flexible",
+                "Simple",
+                "easy",
+                "lightweight",
+                "lite",
+                "pager",
+                "pagination",
+                "paginator",
+                "universal"
+            ],
+            "support": {
+                "issues": "https://github.com/AshleyDawson/SimplePagination/issues",
+                "source": "https://github.com/AshleyDawson/SimplePagination/tree/master"
+            },
+            "time": "2019-01-17T12:38:28+00:00"
+        },
         {
             "name": "respect/stringifier",
             "version": "0.2.0",

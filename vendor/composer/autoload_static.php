@@ -56,6 +56,16 @@ class ComposerStaticInitb0ade7346c41396b2da3696ec8c5bcba
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'A' => 
+        array (
+            'AshleyDawson\\SimplePagination\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/ashleydawson/simple-pagination/lib',
+            ),
+        ),
+    );
+
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -65,6 +75,7 @@ class ComposerStaticInitb0ade7346c41396b2da3696ec8c5bcba
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb0ade7346c41396b2da3696ec8c5bcba::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb0ade7346c41396b2da3696ec8c5bcba::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitb0ade7346c41396b2da3696ec8c5bcba::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitb0ade7346c41396b2da3696ec8c5bcba::$classMap;
 
         }, null, ClassLoader::class);

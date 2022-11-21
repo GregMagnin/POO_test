@@ -13,6 +13,7 @@
     
 },
     "require": {
-        "respect/validation": "^2.2"
+        "respect/validation": "^2.2",
+        "ashleydawson/simple-pagination": "^1.0"
     }
 }

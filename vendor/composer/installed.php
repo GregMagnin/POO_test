@@ -1,24 +1,33 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '0e9afb705aab67fd849dc49bdd3eaf5a330e8be7',
     'name' => 'acs/projet_php_objet',
   ),
   'versions' => 
   array (
     'acs/projet_php_objet' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '0e9afb705aab67fd849dc49bdd3eaf5a330e8be7',
+    ),
+    'ashleydawson/simple-pagination' => 
+    array (
+      'pretty_version' => '1.0.8',
+      'version' => '1.0.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'b824bcb4f1035d428638884ce823eaf45a22782d',
     ),
     'respect/stringifier' => 
     array (

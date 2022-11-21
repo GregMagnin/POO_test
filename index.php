@@ -23,12 +23,18 @@ switch (getUri()) {
        echo $auth->logUser();
         break;
     case '/homepage':
-        $store->home();
+        $store->all();
         break;
     case '/error':
         $store->error();
         break;
     case '/logout':
         $auth->logout();
+        break;
+    case '/article':
+        $store->show($_GET['id']);
+        break;
+    case '/panier': 
+        $store->cart();
         break;
 }

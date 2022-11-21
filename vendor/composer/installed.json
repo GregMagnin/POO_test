@@ -1,6 +1,63 @@
 {
     "packages": [
         {
+            "name": "ashleydawson/simple-pagination",
+            "version": "1.0.8",
+            "version_normalized": "1.0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AshleyDawson/SimplePagination.git",
+                "reference": "b824bcb4f1035d428638884ce823eaf45a22782d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AshleyDawson/SimplePagination/zipball/b824bcb4f1035d428638884ce823eaf45a22782d",
+                "reference": "b824bcb4f1035d428638884ce823eaf45a22782d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^3.7"
+            },
+            "time": "2019-01-17T12:38:28+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-0": {
+                    "AshleyDawson\\SimplePagination\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ashley Dawson",
+                    "email": "ashley@ashleydawson.co.uk"
+                }
+            ],
+            "description": "Simple, lightweight and universal service that implements pagination on collections of things",
+            "keywords": [
+                "Flexible",
+                "Simple",
+                "easy",
+                "lightweight",
+                "lite",
+                "pager",
+                "pagination",
+                "paginator",
+                "universal"
+            ],
+            "support": {
+                "issues": "https://github.com/AshleyDawson/SimplePagination/issues",
+                "source": "https://github.com/AshleyDawson/SimplePagination/tree/master"
+            },
+            "install-path": "../ashleydawson/simple-pagination"
+        },
+        {
             "name": "respect/stringifier",
             "version": "0.2.0",
             "version_normalized": "0.2.0.0",
