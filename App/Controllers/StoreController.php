@@ -3,7 +3,6 @@
 namespace App\Controllers;
 use App\Models\StoreModel;
 
-
 class StoreController {
 
 
@@ -29,12 +28,24 @@ class StoreController {
         return require './resources/views/homepage.php';
     }
 
-    public function cart(): string 
+    
+    public function cart(): int 
     {
+        $currentpage = $_GET['page']??'1';
         $storeModel = new StoreModel();
-        $cart = $storeModel->addCart();
+        $cart = $storeModel->addCartToDb();
+        $nbr_articles = $storeModel->countArticlesCart();
+        $eachpage = 3;
+        $pages = ceil($nbr_articles / $eachpage);
+        $firstarticle = ($currentpage * $eachpage) - $eachpage;
+        $showcart = $storeModel->PaginationCart($firstarticle, $eachpage);
         return require './resources/views/panier.php';
     }
     
+    public function addToCart(): string
+    {
+        $_SESSION['cart']++;
+        return json_encode(['cart' => $_SESSION['cart']]);
+    }
 
 }

@@ -47,6 +47,7 @@
 
 
 .description {
+position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -73,7 +74,17 @@ border-top: 1px solid black;
     position: absolute;
     color: white;
     right: 580px;
-    border: black solid 1px;
-    border-radius: 30px;
     top: 10px
 }
+
+.addcart {
+font-size: 2rem;
+position: absolute;
+right: 25px;
+bottom: 10px;
+}
+
+.addcart:hover {
+    cursor: pointer;
+}
+
