@@ -2,5 +2,5 @@
 
 require_once 'vendor/autoload.php';
 
-$userTable = new \Databases\Migrations\CreateUsersTable();
+$userTable = new \Database\Migrations\AlterCartsTable();
 $userTable->handle();

@@ -5,12 +5,6 @@ use Database\Connection;
 
 class StoreModel extends Connection {
 
-public function all() : array {
-    $pdo = $this->connection;
-    $sql = 'SELECT * FROM articles';
-    return $pdo->query($sql)->fetchAll();
-
-}
 
 public function get(int $id) : array {
     $pdo = $this->connection;
@@ -21,14 +15,34 @@ public function get(int $id) : array {
     return $statement->fetch();
 }
 
-public function addCart(string $name, string $content, string $image, ) : array {
-    function createArticle (): void {
-        require './database/db.php';
-        $sql = "INSERT INTO articles (title, description) VALUES ('$title', '$description')";
-        $query = $connection->prepare($sql);
-        $query->execute();
+public function addCart() : void {
+        $pdo = $this->connection;
+        $sql = "INSERT INTO carts (user_ID, article_ID, price, user_name, article_name) VALUES ('$_SESSION[id]','$_GET[id]','$_GET[price]', '$_SESSION[user]', '$_GET[article_name]')";
+        $statement = $pdo->prepare($sql);
+        $statement->execute();
       }
-}
 
 
+public function countArticles() : int {
+ $pdo = $this->connection;
+ $sql="SELECT count(*) as cpt from articles";
+ $query=$pdo->prepare($sql);
+ $query->execute();
+ $result=$query->fetch();
+ $nbr_articles = $result['cpt'];
+ return $nbr_articles;
+ }
+ 
+public function Pagination(int $firstarticle, int $eachpage) : array {
+    $pdo = $this->connection;
+    $sql="SELECT * FROM articles ORDER BY price desc limit :firstarticle , :eachpage";
+    $query=$pdo->prepare($sql);
+    $query->bindValue(':firstarticle',$firstarticle,\PDO::PARAM_INT);
+    $query->bindValue(':eachpage',$eachpage,\PDO::PARAM_INT);
+    $query->execute();
+    $items=$query->fetchAll();
+    return $items;
+  }
+
 }
+

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Josefin sans';
+    overflow-x: hidden;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #ff2800;
+    color: white;
+}
+
+.cart>* {
+    width: 42px;
+    height: 42px;
+}
+
+.containerProducts {
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+   
+}
+
+.img {
+    display: flex;
+    height: 70%;
+    width: 100%;
+}
+
+.img>* {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.description {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 30%;
+border-top: 1px solid black;
+}
+
+.product1 {
+    width: 25vw;
+    height: 40vh;
+    border: 2px solid black;
+    
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 2rem;
+    gap: 10 px;
+}
+
+.numberCart {
+    position: absolute;
+    color: white;
+    right: 580px;
+    border: black solid 1px;
+    border-radius: 30px;
+    top: 10px
+}

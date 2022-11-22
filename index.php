@@ -38,3 +38,6 @@ switch (getUri()) {
         $store->cart();
         break;
 }
+
+?>
+

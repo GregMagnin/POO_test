@@ -11,12 +11,12 @@ class AuthController {
 
     public function login(): string
     {
-        return require './views/login.php';
+        return require './resources/views/login.php';
     }
 
     public function register(): string
     {
-        return require './views/register.php';
+        return require './resources/views/register.php';
     }
 
 

@@ -5,12 +5,7 @@ use App\Models\StoreModel;
 
 
 class StoreController {
-    
-    public function home(): string
-    {
 
-        return require './views/homepage.php';
-    }
 
     public function error(): string
     {
@@ -20,20 +15,26 @@ class StoreController {
     public function show(string $id): int {
         $storeModel = new StoreModel();
         $article = $storeModel->get($id);
-        return require './views/article.php';
+        return require './resources/views/article.php';
     }
 
-    public function all(): array {
+    public function all(): int {
+        $currentpage = $_GET['page']??'1';
         $storeModel = new StoreModel();
-        $articles = $storeModel->all();
-        return require './views/homepage.php';
+        $nbr_articles = $storeModel->countArticles();
+        $eachpage = 3;
+        $pages = ceil($nbr_articles / $eachpage);
+        $firstarticle = ($currentpage * $eachpage) - $eachpage;
+        $items = $storeModel->Pagination($firstarticle, $eachpage);
+        return require './resources/views/homepage.php';
     }
 
     public function cart(): string 
     {
         $storeModel = new StoreModel();
         $cart = $storeModel->addCart();
-        return require './views/panier.php';
+        return require './resources/views/panier.php';
     }
     
+
 }
