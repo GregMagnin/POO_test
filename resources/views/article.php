@@ -18,7 +18,7 @@
         <li>C'est le super store vroom</li>
         <a href="/panier">
             <li id="cart-js" class="cart"><img src="/resources/assets/panier.png" alt="PANIER">
-            <p id="cartincrement" class="numberCart"></p></li>
+            <p id="cartincrement" class="numberCart"><?php echo ($_SESSION['cart']) ?></p></li>
         </a>
         <li><a href="/logout"><button>Se déconnecter</button></a></li>
     </ul>

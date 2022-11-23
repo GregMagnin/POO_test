@@ -31,14 +31,9 @@ class StoreController {
     
     public function cart(): int 
     {
-        $currentpage = $_GET['page']??'1';
         $storeModel = new StoreModel();
-        $cart = $storeModel->addCartToDb();
-        $nbr_articles = $storeModel->countArticlesCart();
-        $eachpage = 3;
-        $pages = ceil($nbr_articles / $eachpage);
-        $firstarticle = ($currentpage * $eachpage) - $eachpage;
-        $showcart = $storeModel->PaginationCart($firstarticle, $eachpage);
+        $cart = $storeModel->getArticlesForUser();
+        var_dump($cart);
         return require './resources/views/panier.php';
     }
     
